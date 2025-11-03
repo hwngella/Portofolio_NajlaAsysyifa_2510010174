@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Portofolio Najla Asysyifa</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Perbaikan: Menambahkan px dan menghilangkan angka margin 10 yang tidak jelas */
+        body {
+            font-family: 'verdana', 'Arial', sans-serif; 
+            background-color: #72c7a4; 
+            color: #343a40; 
+            margin: 0; 
+            padding: 30px;
+        }
+
+        /* Perbaikan: Perbaiki sintaksis box-shadow dan atur margin/max-width */
+        main {
+            max-width: 900px;
+            margin: 50px auto; 
+            padding: 30px;
+            background-color: #fabbd8;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Diperbaiki: nilai rgba */
+            border-radius: 18px;
+        }
+
+        /* Perbaikan: Tambahkan titik koma yang hilang */
+        h1 {
+            font-size: 2.5em; 
+            color: #c45970;
+            text-align: center;
+            border-bottom: 3px solid #9de9bf; /* Titik koma ditambahkan */
+            padding-bottom: 20px;
+        }
+
+        /* Perbaikan: Memindahkan styling gambar dari h2 ke class .foto-profil */
+        .foto-profil {
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 20px auto;
+            object-fit: cover;
+            border: 5px solid #ffffff;
+            border-radius: 50%; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Perbaikan nilai rgba */
+        }
+        
+        /* Tambahkan styling dasar untuk h2 */
+        h2, h3 {
+            color: #c45970;
+            margin-top: 30px;
+        }
+
+        ul, ol {
+            padding-left: 30px;
+        }
+
+        a {
+            color: #c45970; /* Diubah agar lebih kontras dengan background */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        /* Perbaikan: Menggunakan tanda pagar (#) yang hilang */
+        #tombol-fakta {
+            background-color: #88e79e; /* Diperbaiki: kode hex yang benar */
+            color: white; /* Diubah menjadi white agar terbaca */
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #tombol-fakta:hover {
+            background-color: #52b367;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Najla Asysyifa</h1>
+        <img src="c:\Users\HP\Downloads\ella.jpeg" alt="Foto Profil Saya" class="foto-profil"> 
+
+        <section class="tentang-saya">
+            <h2>Tentang Saya</h2>
+            <p>Halo! Saya adalah seorang mahasiswa Teknik Informatika yang bersemangat untuk menjadi seorang programmer. Saya percaya pada pembelajaran dan senang memecahkan masalah kompleks dengan kode. Saat ini saya fokus mempelejari dasar-dasar HTML, CSS, dan JavaScript untuk membangun fondasi yang kuat.</p>
+        </section>
+
+        <section class="minat">
+            <h2>Minat & Hobi Saya</h2>
+            <ul>
+                <li>Menonton Film dan Drama Series</li>
+                <li>Menggambar</li>
+                <li>Koleksi Barang</li>
+            </ul> </section>
+
+        <section class="keterampilan">
+            <h3>Keterampilan yang Dipelajari</h3>
+            <ol>
+                <li>HTML5 (Struktur Semantik)</li>
+                <li>CSS3 (Styling & Responsiveness Dasar)</li>
+                <li>JavaScript Dasar (Manipulasi DOM Sederhana)</li>
+            </ol>
+        </section>
+
+        <section class="kontak"> <h2>Hubungi Saya</h2>
+            <p>
+                <a href="https://www.instagram.com/lalavrae?igsh=MWR4eDgwNGMwb3ZoaQ==" target="_blank">Lihat Profil Instagram</a>
+            </p>
+            <p>
+                <a href="mailto:najlaasysyf@gmail.com">Kirim Email</a>
+            </p> </section>
+
+        <section class="bonus-js">
+            <h2>Fakta Tambahan</h2>
+            <button id="tombol-fakta">Tampilkan Fakta Menarik</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portofolio Najla Asysyifa</p>
+    </footer>
+
+    <script>
+        // Data fakta menarik
+        var faktaMenarik = [
+            "Saya mahir dalam hal menggambar digital.",
+            "Saya bisa membaca seharian jika itu AU.",
+            "Saya bercita-cita menjadi Data Scientist."
+        ];
+        
+        // Dapatkan tombol berdasarkan ID
+        var tombol = document.getElementById('tombol-fakta'); // Perbaikan: Menggunakan ID yang benar
+
+        // Tambahkan event Listener untuk klik tombol
+        tombol.onclick = function() {
+            // Pilih fakta random
+            var randomIndex = Math.floor(Math.random() * faktaMenarik.length); // Perbaikan: 'length'
+            var fakta = faktaMenarik[randomIndex];
+
+            // Tampilkan alert
+            alert('Fakta Menarik: ' + fakta);
+        };
+    </script>
+</body>
+</html>
