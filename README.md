@@ -1,0 +1,2 @@
+# Portofolio_NajlaAsysyifa_2510010174
+Portofolio Najla
